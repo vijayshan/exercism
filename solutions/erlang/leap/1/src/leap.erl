@@ -1,0 +1,12 @@
+-module(leap).
+
+-export([leap_year/1]).
+
+
+leap_year(Year) -> 
+    if 
+        (Year rem 400==0) or ((Year rem 100 /=0) and (Year rem 4 == 0) )  ->
+            true;
+        true ->
+            false
+    end.
